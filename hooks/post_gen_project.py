@@ -25,3 +25,4 @@ if __name__ == "__main__":
     print("Running git init...")
     subprocess.call(["git", "init"], cwd=PROJECT_DIRECTORY)
     print("Done!")
+    print("Now run \033[1mcd {{cookiecutter.project_slug}}\033[0m and \033[1mmake develope\033[0m to start developing!")

@@ -97,7 +97,8 @@ develope:
 	poetry run pre-commit install
 	@echo "\n\033[1mActivate the environment with:\033[0m poetry shell"
 {% else %}
-	conda create -n {{ cookiecutter.project_slug }} --channel conda-forge python={{ cookiecutter.python_version }} --file requirements_dev.txt
+	conda create -n {{ cookiecutter.project_slug }} --experimental-solver=libmamba --channel conda-forge python={{ cookiecutter.python_version }} --file requirements_dev.txt
+	conda run -n {{ cookiecutter.project_slug }} pre-commit install
 	@echo "\n\033[1mActivate the environment with:\033[0m conda activate {{ cookiecutter.project_slug }}"
 {% endif %}
 style:

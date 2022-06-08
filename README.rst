@@ -42,10 +42,21 @@ Install poetry by downloading and running `install-poetry.py`_::
 Conda
 ^^^^^
 Conda_ has been the way to go for dealing with scientific python for a while. The issue is that it can be quite slow.
-Thankfully, there's a new drop in package manager called Mamba_. I strongly recommend to use mamba instead of conda. 
-It can be easily installed from conda with ``conda install -c conda-forge mamba`` or installing the miniforge_ package manager (recommended).
+Thankfully, there's a new drop in package manager called Mamba_. I strongly recommend to use mamba instead of conda since it is notably faster_. 
+It can be easily installed from ``conda`` with::
+    
+    conda update -n base conda
+
+    conda install -n base conda-libmamba-solver
+
+Then to install dependencies you can use::
+
+    conda install --experimental-solver=libmamba <package name>
+    
+or install the miniforge_ package manager which already uses mamba under the hood and conda-forge as a the default channel.
 
 .. _Mamba: https://mamba.readthedocs.io/en/latest/index.html
+.. _faster: https://pythonspeed.com/articles/faster-conda-install/
 .. _miniforge: https://github.com/conda-forge/miniforge
 
 QuickStart
@@ -55,7 +66,7 @@ Generate a Python package project::
 
     cookiecutter https://github.com/vizzTools/cookiecutter-pypackage
 
-Then, create an environment and install the dev requirements  (linter, formatter...) with::
+Then, to create an environment and install the dev requirements  (linter, formatter...) just run::
 
     make develope
 

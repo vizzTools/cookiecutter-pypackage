@@ -37,7 +37,6 @@ bump2version= ">=0.5.11"
 coverage = {extras = ["toml"], version = ">=6.2"}
 darglint = ">=1.8.1"
 flake8 = ">=4.0.1"
-flake8-bandit = ">=2.1.2"
 flake8-bugbear = ">=21.9.2"
 flake8-docstrings = ">=1.6.0"
 flake8-rst-docstrings = ">=0.2.5"
@@ -53,7 +52,6 @@ safety = ">=1.10.3"
 sphinx = ">=4.3.2"
 sphinx-autobuild = ">=2021.3.14"
 sphinx-click = ">=3.0.2"
-typeguard = ">=2.13.3"
 xdoctest = {extras = ["colors"], version = ">=0.15.10"}
 myst-parser = {version = ">=0.16.1"}
 flakeheaven = {version = ">=1.0.1"}
@@ -114,8 +112,6 @@ show_source = true
 [tool.flakeheaven.plugins]
 # include everything in pyflakes except F401
 pyflakes = ["+*", "-F401"]
-# enable only codes from S100 to S199
-flake8-bandit = ["-*", "+S1??"]
 # enable everything that starts from `flake8-`
 "flake8-*" = ["+*"]
 # explicitly disable plugin
