@@ -1,20 +1,25 @@
-fail_fast: true  # stops checks if one fails
-
 repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
   - repo: https://github.com/ambv/black
     rev: 22.3.0
     hooks:
       - id: black
-        args: [--diff, --check]
-        exclude: (^test/|^docs/)
- 
-  - repo: local
-    hooks:             
+        exclude: (^docs/)
+
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        name: isort
+
+  - repo: https://github.com/flakeheaven/flakeheaven
+    rev: 1.0.1
+    hooks:
       - id: flakeheaven
-        name: flakeheaven
         entry: flakeheaven lint
-        types: [python]
-        files: ^{{cookiecutter.project_slug}}/
-        language: python
-        additional_dependencies: [flakeheaven==1.0.1]
-        stages: [push, commit]

@@ -98,7 +98,7 @@ honor_noqa = true
 
 [tool.flakeheaven]
 # optionally inherit from remote config (or local if you want)
-base = "https://raw.githubusercontent.com/flakeheaven/flakeheaven/main/pyproject.toml"
+# base = "https://raw.githubusercontent.com/flakeheaven/flakeheaven/main/pyproject.toml"
 # specify any flake8 options. For example, exclude "example.py":
 exclude = [".git", "docs", ".ipynb*", "*.ipynb", ".pytest_cache"]
 # make output nice
