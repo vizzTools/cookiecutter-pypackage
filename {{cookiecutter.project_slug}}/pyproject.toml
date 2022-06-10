@@ -39,7 +39,6 @@ darglint = ">=1.8.1"
 flake8 = ">=4.0.1"
 flake8-bugbear = ">=21.9.2"
 flake8-docstrings = ">=1.6.0"
-flake8-rst-docstrings = ">=0.2.5"
 furo = ">=2021.11.12"
 isort = ">=5.10.1"
 pylint = ">=2.7.4"
@@ -114,7 +113,6 @@ show_source = true
 pyflakes = ["+*", "-F401"]
 # enable everything that starts from `flake8-`
 "flake8-*" = ["+*"]
-# explicitly disable plugin
-flake8-docstrings = ["-*"]
+flake8-docstrings = ["+*"]
 pylint = ["+*"]
 pycodestyle = ["-W503"]

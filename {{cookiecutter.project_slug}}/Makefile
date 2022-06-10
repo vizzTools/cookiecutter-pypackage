@@ -106,6 +106,6 @@ style:
 	poetry run black .
 	poetry run isort .
 {% else %}
-	black .
-	isort .
+	conda run -n {{ cookiecutter.project_slug }} black .
+	conda run -n {{ cookiecutter.project_slug }} isort .
 {% endif %}

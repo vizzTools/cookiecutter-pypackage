@@ -18,8 +18,12 @@ repos:
       - id: isort
         name: isort
 
-  - repo: https://github.com/flakeheaven/flakeheaven
-    rev: 1.0.1
-    hooks:
+  - repo: local
+    hooks:             
       - id: flakeheaven
-        entry: flakeheaven lint
+        name: flakeheaven
+        entry: {% if cookiecutter.poetry_or_conda == 'Poetry' %}poetry run{% else %}conda run -n {{cookiecutter.project_slug}}{% endif %} flakeheaven lint
+        types: [python]
+        files: ^{{cookiecutter.project_slug}}/
+        language: python
+        stages: [push, commit]
