@@ -1,5 +1,13 @@
+
+.. raw:: html
+
+   <div style="background-color: #ffeb9c; color: #8a6d3b; border-left: 5px solid #ffeeba; padding: 15px; margin-bottom: 20px;">
+       <p style="font-weight: bold;">Deprecated:</p>
+       <p>This template is deprecated. Use <a src="https://hatch.pypa.io/latest/">Hatch</a> instead </p>
+   </div>
+
 ======================
-Cookiecutter PyPackage
+DEPRECATED Cookiecutter PyPackage
 ======================
 
 Vizzuality Cookiecutter_ template for a simple Python package.
