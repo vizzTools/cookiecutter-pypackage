@@ -6,7 +6,9 @@ DEPRECATED Cookiecutter PyPackage
 Deprecation Warning
 -------------------
 This template has been deprecated. Use Hatch_ instead.
+
 .. _Hatch: https://hatch.pypa.io/latest/
+
 -------
 
 Vizzuality Cookiecutter_ template for a simple Python package.
